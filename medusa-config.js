@@ -1,5 +1,11 @@
+const dotenv = require("dotenv");
+dotenv.config({ path: ".env.local" });
+// Rest of your config
 const { QUOTE_MODULE } = require("./src/modules/quote");
-const { loadEnv, defineConfig, Modules } = require("@medusajs/framework/utils");
+
+const { loadEnv, defineConfig, Modules } =
+require("@medusajs/framework/utils");
+
 
 loadEnv(process.env.NODE_ENV, process.cwd());
 const DB_USERNAME = process.env.DB_USERNAME
@@ -27,16 +33,16 @@ module.exports = defineConfig({
   },
   modules: {
     companyModuleService: {
-      resolve: "./modules/company",
+    resolve: "./modules/company",
     },
     [QUOTE_MODULE]: {
-      resolve: "./modules/quote",
+    resolve: "./modules/quote",
     },
     [Modules.CACHE]: {
-      resolve: "@medusajs/medusa/cache-inmemory",
+    resolve: "@medusajs/medusa/cache-inmemory",
     },
     [Modules.WORKFLOW_ENGINE]: {
-      resolve: "@medusajs/medusa/workflow-engine-inmemory",
+    resolve: "@medusajs/medusa/workflow-engine-inmemory",
     },
-  },
-});
+    },
+    });
