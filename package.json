@@ -37,7 +37,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@starter/types": "1.0.0",
+    "@starter/types": "workspace:^",
     "@medusajs/test-utils": "2.0.0",
     "@medusajs/ui-preset": "2.0.0",
     "@mikro-orm/cli": "5.9.7",
