@@ -5,7 +5,7 @@ node_modules
 
 # Yarn 2+
 .yarn/*
-# .yarn
+.yarn
 # .yarnrc.yml
 !.yarn/patches
 !.yarn/plugins
@@ -42,7 +42,7 @@ yarn-error.log*
 **/.env.production.local
 
 # Turbo
-# .turbo
+.turbo
 
 # vercel
 .vercel

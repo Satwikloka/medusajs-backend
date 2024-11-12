@@ -13,7 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build",
+    "build": "cross-env npm run clean && npm run build:server",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa migrations run && medusa start",
     "dev": "medusa develop",
